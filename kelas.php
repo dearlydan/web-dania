@@ -49,15 +49,6 @@ $result = mysqli_query($koneksi, $query);
                 <?php endwhile; ?>
             </tbody>
         </table>
-        <nav>
-            <ul class="pagination">
-                <?php for ($i = 1; $i <= $total_pages; $i++) : ?>
-                    <li class="page=item <?php if ($page == $i) echo 'active'; ?>">
-                        <a class="page-link" href="?page=<?php echo $i; ?>&search=<?php echo $search; ?>"><?php echo $i; ?></a>
-                    </li>
-                <?php endfor; ?>
-             </ul>
-        </nav>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
