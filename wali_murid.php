@@ -46,22 +46,12 @@ $result = mysqli_query($koneksi, $query);
                         <td><?php echo $row["kontak"]; ?></td>
                         <td>
                             <a href="edit_wali.php?id=<?php echo $row["id_wali"]; ?>" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="hapus_wali.php?id=<?php echo $row["id_siswa"]; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?');">Hapus</a>
+                            <a href="hapus_wali.php?id=<?php echo $row["id_wali"]; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?');">Hapus</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
         </table>
-
-        <div class="pagination">
-            <?php for ($i = 1; $i <= $total_pages; $i++) : ?>
-                <?php if ($i == $page) : ?>
-                    <span class="page-link active"><?php echo $i; ?></span>
-                <?php else : ?>
-                    <a class="page-link" href="?page=<?php echo $i; ?>&search=<?php echo $search; ?>"><?php echo $i; ?></a>
-                <?php endif; ?>
-            <?php endfor; ?>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

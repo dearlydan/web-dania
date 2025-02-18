@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               VALUES ('$nis', '$nama_siswa', '$jenis_kelamin', '$tempat_lahir', '$tanggal_lahir', '$id_kelas', '$id_wali')";
 
     if (mysqli_query($koneksi, $query)) {
-        header("Location: siswa.php"); 
+        header("Location: index.php"); 
         exit();
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
@@ -53,8 +53,8 @@ $wali_result = mysqli_query($koneksi, $wali_query);
                 <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                 <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
                     <option value="">Pilih Jenis Kelamin</option>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
+                    <option value="L">Laki-laki</option>
+                    <option value="P">Perempuan</option>
                 </select>
             </div>
             <div class="mb-3">
